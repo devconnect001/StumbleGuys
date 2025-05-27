@@ -1,9 +1,10 @@
 pages:
  stage: deploy
  script:
-     - mv WebGL public
+     - mkdir public
+     - cp -r WebGL/* public/
      artifacts:
-        paths:
-            - public
-        only:
-            - main
+       paths:
+           - public
+           only:
+               - main
