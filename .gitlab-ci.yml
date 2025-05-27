@@ -1,9 +1,9 @@
 pages:
-script:
--mkdir .public
--cp -r public/* .public/
-artifacts:
-paths:
-- .public
-only:
--main
+ stage: deploy
+ script:
+     - mv WebGL public
+     artifacts:
+        paths:
+            - public
+        only:
+            - main
